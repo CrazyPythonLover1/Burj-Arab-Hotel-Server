@@ -17,7 +17,7 @@ app.use(bodyParser.json())
 var serviceAccount = require("./configs/burj-al-arab-restaurant-firebase-adminsdk-p1q4o-b867e98223.json");
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
-  databaseURL: "https://burj-al-arab-restaurant.firebaseio.com"
+  databaseURL: process.env.FIRE_DB
 });
 
 
